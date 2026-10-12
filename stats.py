@@ -25,7 +25,10 @@ def median(data):
     2
     '''
     ordered = sorted(data)
-    return ordered[len(ordered) // 2]
+    n = len(ordered)
+    if n % 2 == 1:
+        return ordered[n // 2]
+    return (ordered[n // 2 - 1] + ordered[n // 2]) / 2
 
 
 def mode(data):
